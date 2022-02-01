@@ -20,7 +20,7 @@
         </dl>
     </div>
 
-    <div class = "toc">
+    <div class = "toc" id = "toc">
         <h2 class = "h2">Table of Contents</h2>
         <ul class = "toc">
             <li>
@@ -51,17 +51,13 @@
             </li>
             <li>
                 <a href = "#improve">Improvement Plan</a>
-                <ul class = "toc">
-                    <li><a href = "#htmlToImprove">HTML</a></li>
-                    <li><a href = "#cssToImprove">CSS</a></li>
-                    <li><a href = "#jsToImprove">JavaScript</a></li>
-                </ul>
             </li>
         </ul>
     </div>
 
     <section id = "intro">
         <h2>Introduction</h2>
+        <a href="#toc">Back to top</a>
         <p>This website will give a thorough evaluation of the website we created for Webtech assignments, using the <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> and feedback from Teaching Assistants.</p>
         <p>Appendix A will assess the accessibility of the page according to the WCAG's success levels (A, AA, AAA), using provided requirements. For each guideline, a short discussion and conclusion will be included for clarification or making comparisons where relevant.</p>
         <p>Appendix B will compile and categorize TA feedback. </p>
@@ -72,11 +68,12 @@
 
     <section id = "evaluation">
         <h2>Accessibility Evaluation</h2>
-
         <section id = "appendixA">
+            <h3>Appendix A</h3>
+            <a href="#toc">Back to top</a>
             <p class = "description">This section will provide an evaluation of our website according to the WCAG, <strong>whether it meets level A or not, <u>where relevant & appropriate to our website's contents</u></strong>, as the webpage is very basic and minimal.</p>
             <table>
-                <caption><h3>Appendix A: Web Content Accessibility Guidelines (WCAG)</h3></caption>
+                <caption><h4>Appendix A: Web Content Accessibility Guidelines (WCAG)</h4></caption>
                 <tr>
                     <th class = "guideline" colspan = "2">Guideline</th>
                     <th class = "level">Level</th>
@@ -396,7 +393,9 @@
         </section>
 
         <section id = "appendixB">
-            <p class = "description"></p>
+            <h3>Appendix B</h3>
+            <a href="#toc">Back to top</a>
+            <p class = "description">This section will collect all TA feedback from previous assignments and categorize them into different types.</p>
             <table>
                 <caption><h3>Appendix B: TA Feedback Assignment 1 & 2</h3></caption>
                 <tr>
@@ -453,33 +452,150 @@
     <section id = "improve">
         <h2>Improvement Plan</h2>
         <p>This section will give possible ways to improve our webpage and address the unfulfilled requirements based on the information gathered in Appendix A & B.</p>
-        <p>Improvements are listed descending order, from most important to least important.</p>
-        <table id = "htmlToImprove">
-            <caption><h3>HTML Improvements</h3></caption>
+        <p>Improvements are listed descending order, from most to least important.</p>
+        <a href="#toc">Back to top</a>
+        <table id = "improvetable">
+            <caption><h3>Improvement Plan</h3></caption>
             <tr>
-                <th>Requirement(s)</th>
-                <th>Action</th>
-                <th>Aim</th>
+                <th class = "requirements">Requirement(s)</th>
+                <th class = "type">Type</th>
+                <th class = "action">Action</th>
+                <th class = "aim">Aim</th>
             </tr>
             <tr>
-                <td>
-                    <ul>
-                        <li>FLASH29: Setting the label property for form components</li>
-                        <li>H44: Using label elements to associate text labels with form controls</li>
-                    </ul>
+                <td class = "requirements">
+                    <p>FLASH29: Setting the label property for form components</p>
+                    <p>H44: Using label elements to associate text labels with form controls</p>
+                    <p>G205: Including a text cue for colored form control labels</p>
+                    <p>ARIA2: Identifying a required field with the aria-required property</p>
                 </td>
-                <td>
-                    <p>Add extra formHeader row before form inputs:</p>
+                <td class = "type">
+                    <p>HTML & CSS</p>
+                </td>
+                <td class = "action">
+                    <p>Add extra formHeader row before form inputs (HTML):</p>
                     <pre>
-&lt;tr id ="formHeader"&gt;
-    &lt;td colspan="5"&gt;
-        &lt;h4&gt;add a new item (required fields are followed by &lt;abbr title="required"&gt;*&lt;/abbr&gt;)&lt;/h4&gt;
-    &lt;/td&gt;
-&lt;/tr&gt;
+<!--                  -->&lt;tr id ="formHeader"&gt;
+<!--                  -->    &lt;td colspan="5"&gt;
+<!--                  -->        &lt;h4&gt;add a new item (required fields are followed by &lt;abbr title="required"&gt;*&lt;/abbr&gt;)&lt;/h4&gt;
+<!--                  -->    &lt;/td&gt;
+<!--                  -->&lt;/tr&gt;
+                    </pre>
+                    <p>Indicate required inputs with * (HTML):</p>
+                    <pre>
+<!--                  -->&lt;tr&gt;
+<!--                  -->    &lt;td&gt;&lt;label for="image"&gt;Image&lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;&lt;/td&gt;
+<!--                  -->    &lt;td&gt;&lt;label for="image"&gt;Brand&lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;&lt;/td&gt;
+<!--                  -->    &lt;td&gt;&lt;label for="image"&gt;Model&lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;&lt;/td&gt;
+<!--                  -->    &lt;td&gt;&lt;label for="image"&gt;Operating System&lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;&lt;/td&gt;
+<!--                  -->    &lt;td&gt;&lt;label for="image"&gt;Screen Size (inch)&lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;&lt;/td&gt;
+<!--                  -->&lt;/tr&gt;
+                    </pre>
+                    <p>Make placeholder text for required fields red (CSS):</p>
+                    <pre>
+<!--                  -->::placeholder {
+<!--                  -->	color: red;
+<!--                  -->}
                     </pre>
                 </td>
-                <td>
+                <td class = "aim">
                     <p>Make it so users do not have to scroll up for table headers when submitting a new item, in case the table gets too large.</p>
+                    <p>Give users more information on what they need to do.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
+                    <p>Specify how users can use a button</p>
+                </td>
+                <td class = "type">
+                    <p>HTML</p>
+                </td>
+                <td class = "action">
+                    <p>Change Reset Database button to:</p>
+                    <pre>
+<!--                  -->&lt;div id = "resetbox"&gt;
+<!--                  -->    &lt;button id="resetbutton" class="buttons"&gt;Double-click or &lt;strong&gt;Alt + R&lt;/strong&gt; to Reset Database&lt;/button&gt;
+<!--                  -->&lt;/div&gt;
+                    </pre>
+                </td>
+                <td class = "aim">
+                    <p>Give users more information on what they need to do.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
+                    <p>H37: Using alt attributes on img elements</p>
+                    <p>H24: Providing text alternatives for the area elements of image maps</p>
+                </td>
+                <td class = "type">
+                    <p>HTML</p>
+                </td>
+                <td class = "action">
+                    <p>Add &lt;alt;&gt; attribute to map:</p>
+                    <pre>
+<!--                  -->...
+<!--                  -->    &lt;img ... alt="Store Location: Vijzelstraat, Amsterdam"&gt;
+<!--                  -->...
+                    </pre>
+                </td>
+                <td class = "aim">
+                    <p>Have text describing what the map is showing in case an user has problems with their network/device.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td class = "requirements">
+                    <p>Sortable tables on relevant columns</p>
+                </td>
+                <td class = "type">
+                    <p>JavaScript</p>
+                </td>
+                <td class = "action">
+                    <p>Make sorting on Image column not possible, as it is not appropriate to sort image by URL.</p>
+                    <pre>
+<!--                  -->for(let i=1; i &lt; th.length; i++){
+<!--                  -->   th[i].addEventListener('click',sort(i));
+<!--                  -->}
+                    </pre>
+                    <p>Since Image is the first column (index 0), change i = 1 to exlude sorting on column 0.</p>
+                </td>
+                <td class = "aim">
+                    <p>Remove unnecessary features</p>
+                    <p>Meet a learning goal for the assignment</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
+                    <p>HTML code indentation needs to be consistent</p>
+                </td>
+                <td class = "type">
+                    <p>HTML</p>
+                </td>
+                <td class = "action">
+                    <p>Fix inconsistent indentation in some areas of the code</p>
+                </td>
+                <td class = "aim">
+                    <p>Make the code easier to read</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
+                    <p>Separate all styling from HTML file</p>
+                </td>
+                <td class = "type">
+                    <p>HTML & CSS</p>
+                </td>
+                <td class = "action">
+                    <p>Replace &lt;br&gt; tags in HTML code with &lt;p&gt; tags:</p>
+                    <pre>
+<!--                  -->&lt;td id="contactinfo"&gt;
+<!--                  -->    &lt;p&gt;&lt;strong&gt;&lt;u&gt;Contact info:&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+<!--                  -->    &lt;p&gt;&lt;a href="mailto:cellphoneshop@cellphonemail.cellphone" id="emailbutton"&gt;Email&lt;/a&gt; cellphoneshop@cellphonemail.cellphone&lt;/p&gt;
+<!--                  -->    &lt;p&gt;Tel: +3123456789&lt;/p&gt;
+<!--                  -->&lt;/td&gt;
+                    </pre>
+                </td>
+                <td class = "aim">
+                    <p>Meet a learning goal for the assignment</p>
                 </td>
             </tr>
         </table>
