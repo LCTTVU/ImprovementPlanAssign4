@@ -7,6 +7,7 @@
     <title>Synthesis & Evaluation</title>
     <link rel="stylesheet" href="stylesheetassignment4.css">
 </head>
+<!--This document uses the stylesheetassignment4.css file-->
 <body>
     <p id="contentlink"><a href = "#contents">Contents</a></p>
 
@@ -560,7 +561,54 @@
                 </td>
                 <td class = "aim">
                     <p>Remove unnecessary features</p>
-                    <p>Meet a learning goal for the assignment</p>
+                    <p>Meet a learning goal</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
+                    <p>Missing CSS tags:</p>
+                    <ul>
+                        <li><pre>background</pre> (shorthand notation)</li>
+                        <li><pre>background-image</pre></li>
+                        <li><pre>background-repeat</pre></li>
+                        <li><pre>border-spacing</pre></li>
+                        <li><pre>border-style</pre></li>
+                        <li><pre>border-width</pre></li>
+                        <li><pre>font-style</pre></li>
+                        <li><pre>font-variant</pre></li>
+                        <li><pre>list-style</pre></li>
+                        <li><pre>margin-bottom</pre></li>
+                    </ul>
+                </td>
+                <td class = "type">
+                    <p>CSS</p>
+                </td>
+                <td class = "action">
+                    <p>Add border-color:</p>
+                    <pre>
+<!--                  -->.buttons {
+<!--                  -->   ...
+<!--                  -->	border-color: rgba(48,48,48,1.00);
+<!--                  -->	...
+<!--                  -->}                        
+                    </pre>
+                    <p>Add font-variant:</p>
+                    <pre>
+<!--                  -->#formHeader  {
+<!--                  -->	font-variant: small-caps;
+<!--                  -->}                       
+                    </pre>
+                    <p>Add font-style:</p>
+                    <pre>
+<!--                  -->.before:hover {
+<!--                  -->   ...
+<!--                  -->	font-style: oblique;
+<!--                  -->   ...
+<!--                  -->}                       
+                    </pre>
+                </td>
+                <td class = "aim">
+                    <p>Meet a learning goal</p>
                 </td>
             </tr>
             <tr>
@@ -595,7 +643,26 @@
                     </pre>
                 </td>
                 <td class = "aim">
-                    <p>Meet a learning goal for the assignment</p>
+                    <p>Meet a learning goal</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
+                    <p>G202: Ensuring keyboard control for all functionality</p>
+                </td>
+                <td class = "type">
+                    <p>JavaScript</p>
+                </td>
+                <td class = "action">
+                    <p>Add keyboard input <strong>Alt + R</strong> to reset database:</p>
+                    <pre>
+<!--                  -->$(document).keypress("r",function(e) {
+<!--                  -->    if(e.altKey) {resetDatabase()};
+<!--                  -->});
+                    </pre>
+                </td>
+                <td class = "aim">
+                    <p>Make the webpage more accessible in case of mouse/trackpad failure.</p>
                 </td>
             </tr>
         </table>

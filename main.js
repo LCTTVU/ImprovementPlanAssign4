@@ -116,8 +116,7 @@ $(function() {
     $('#resetbutton').dblclick(resetDatabase);
 
     $(document).keypress("r",function(e) {
-        if(e.altKey)
-          resetDatabase();
+        if(e.altKey) {resetDatabase()};
     });
 
     function deleteRows() {

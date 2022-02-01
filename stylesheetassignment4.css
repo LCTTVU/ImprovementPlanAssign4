@@ -7,3 +7,6 @@ table, th, td {
     text-align: center;
 }
 
+pre {
+	display:inline-flex;
+}
