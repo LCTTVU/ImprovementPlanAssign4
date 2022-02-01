@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthesis & Evaluation</title>
+    <link rel="stylesheet" href="stylesheetassignment4.css">
+</head>
+<body>
+    <p id="contentlink"><a href = "#contents">Contents</a></p>
+
+    <div class="head">
+        <h1 class = "title" id = "title">Self-evaluation report</h1>
+        <h2 class = "h2" id = "subtitle">According to WCAG 2.0</h2>
+        <dl>
+            <dt>Authors: Webtech Lab 123</dt>
+                <dd>T. Bosma</dd>
+                <dd>C.T.T. Le</dd>
+        </dl>
+    </div>
+
+    <div class = "toc">
+        <h2 class = "h2">Table of Contents</h2>
+        <ul class = "toc">
+            <li>
+                <a href = "#intro">Introduction</a>
+                <ul class = "toc">
+
+                </ul>
+            </li>
+            <li>
+                <a href = "#evaluation">Accessibility Evaluation</a>
+                <ul class = "toc">
+                    <li>
+                        <a href = "#perceivable">1 Perceivable</a>
+                        <ul class = "toc">
+                            <li><a href = "#guideline1-1">Guideline 1.1 Text Alternatives</a></li>
+                            <li><a href = "#guideline1-3">Guideline 1.3 Adaptable</a></li>
+                            <li><a href = "#guideline1-4">Guideline 1.4 Distinguishable</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href = "#perceivable">2 Operable</a>
+                        <ul class = "toc">
+                            <li><a href = "#guideline2-1">Guideline 2.1 Keyboard Accessible</a></li>
+                            <li><a href = "#guideline2-4">Guideline 2.4 Navigable</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href = "#improve">Improvement Plan</a>
+                <ul class = "toc">
+                    <li><a href = "#htmlToImprove">HTML</a></li>
+                    <li><a href = "#cssToImprove">CSS</a></li>
+                    <li><a href = "#jsToImprove">JavaScript</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <section id = "intro">
+        <h2>Introduction</h2>
+        <p>This website will give a thorough evaluation of the website we created for Webtech assignments, using the <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> and feedback from Teaching Assistants.</p>
+        <p>Appendix A will assess the accessibility of the page according to the WCAG's success levels (A, AA, AAA), using provided requirements. For each guideline, a short discussion and conclusion will be included for clarification or making comparisons where relevant.</p>
+        <p>Appendix B will compile and categorize TA feedback. </p>
+        <p>Overall, our website comes close to meeting Accessibility Level A. The website meets many of the more important requirements listed by the WCAG, and the impact of unfulfilled requirements is not high due to the limited amount of content (text, links, images, etc.) on our page.</p>
+        <p>With some improvements, which will be discussed in the Improvement Plan section, the website can reach success level A.</p>
+        <p>This documentation uses a CSS file "stylesheetassignment4.css" to create table borders for it to be more readable.</p>
+    </section>
+
+    <section id = "evaluation">
+        <h2>Accessibility Evaluation</h2>
+
+        <section id = "appendixA">
+            <p class = "description">This section will provide an evaluation of our website according to the WCAG, <strong>whether it meets level A or not, <u>where relevant & appropriate to our website's contents</u></strong>, as the webpage is very basic and minimal.</p>
+            <table>
+                <caption><h3>Appendix A: Web Content Accessibility Guidelines (WCAG)</h3></caption>
+                <tr>
+                    <th class = "guideline" colspan = "2">Guideline</th>
+                    <th class = "level">Level</th>
+                    <th class = "requirements">Fulfilled Requirements</th>
+                    <th class = "requirements">Missing Requirements</th>
+                    <th class = "guidelineEvaluation">Evaluation</th>
+                </tr>
+
+                <tr>
+                    <td class = "guideline">Guideline 1.1 Text Alternatives</td>
+                    <td class = "subguideline">1.1.1: Non-text Content</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>FLASH1: Setting the name property for a non-text object</li>
+                            <li>C18: Using CSS margin and padding rules instead of spacer images for layout design</li>
+                            <li>FLASH27: Providing button labels that describe the purpose of a button</li>
+                            <li>FLASH25: Labeling a form control by setting its accessible name</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>H37: Using alt attributes on img elements</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website meets success level A.</strong></p>
+                        <ul>
+                            <li>With the exception of the side navigation bar, each of our buttons had names that accurately describes its purpose.</li>
+                            <li>As for the sidebar, the functionality of the buttons is not explicitly stated.</li>
+                            <li>We did not include an alt attribute on our map. This can be added to the source code in our improvements phase.</li>
+                            <li>Our reset button did not explicitly state how users can use it, this can be addressed with some minor changes in HTML.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan = "2" id = "guideline1-3" class = "guideline">Guideline 1.3 Adaptable</td>
+                    <td class = "subguideline">1.3.1: Info and Relationships</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>ARIA2: Identifying a required field with the aria-required property <i class = "extradetails"><u>fulfilled by having "required" HTML tags</u></i></li>
+                            <li>C22: Using CSS to control visual presentation of text</li>
+                            <li>G117: Using text to convey information that is conveyed by variations in presentation of text</li>
+                            <li>G141: Organizing a page using headings</li>
+                            <li>H39: Using caption elements to associate data table captions with data tables</li>
+                            <li>H42: Using h1-h6 to identify headings</li>
+                            <li>H43: Using id and headers attributes to associate data cells with header cells in data tables</li>
+                            <li>H48: Using ol, ul and dl for lists or groups of links</li>
+                            <li>H49: Using semantic markup to mark emphasized or special text</li>
+                            <li>H51: Using table markup to present tabular information</li>
+                            <li>H97: Grouping related links using the nav element</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>FLASH29: Setting the label property for form components</li>
+                            <li>H44: Using label elements to associate text labels with form controls</li>
+                            <li>H65: Using the title attribute to identify form controls when the label element cannot be used</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website does NOT meet success level A.</strong></p>
+                        <ul>
+                            <li>We initially found that including a title/label for the form was not necessary since the table header already gave info about what the user needed to input.</li>
+                            <li>Combine this with the placeholders for the input fields, users should have a general idea of what they need to input.</li>
+                            <li>However, this can cause problems when the table has a large number of items, as users may have to scroll up to check the headings / or have already filled out some fields wrong (as the placeholders will disappear).</li>
+                            <li>We will discuss how to address this problem in the Improvements section.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">1.3.2: Meaningful Sequence</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>C27: Making the DOM order match the visual order</li>
+                            <li>G57: Ordering the content in a meaningful sequence</li>
+                            <li>PDF3: Ensuring correct tab and reading order in PDF documents</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements"></td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website meets success level A.</strong></p>
+                        <ul>
+                            <li>Because we came up with ideas before starting to code, we had time to organize our DOM and content's order in a way that makes sense.</li>
+                            <li>The reading order is not affected when converting the webpage to PDF.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan = "3" id = "guideline1-4" class = "guideline">Guideline 1.4 Distinguishable</td>
+                    <td class = "subguideline">1.4.1 & 1.4.3: Use of Color & Contrast</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>C15: Using CSS to change the presentation of a user interface component when it receives focus</li>
+                            <li>G14: Ensuring that information conveyed by color differences is also available in text</li>
+                            <li>G183: Using a contrast ratio of 3:1</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast</li>
+                            <li>G205: Including a text cue for colored form control labels</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website does NOT meet success level A.</strong></p>
+                        <ul>
+                            <li>Our main failure comes from failing to include a text cue to inform users about required form fields, although this can be improved with some minor changes to the source code.</li>
+                            <li>We mostly used white text on a black/dark gray background and the other way around, ensuring a large contrast between text and background for a better reading experience.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">1.4.4: Resize Text</td>
+                    <td class = "level">AA</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>C12: Using percent for font sizes</li>
+                            <li>C20: Using relative measurements to set column widths</li>
+                            <li>C22: Using CSS to control visual presentation of text</li>
+                            <li>SCR34: Calculating size and position in a way that scales with text size</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website fulfills the basic CSS requirements for this guideline.</strong></p>
+                        <ul>
+                            <li>We used percentages for most of our containers (columns, table, navbar) and font sizes, as it is relative and easier to scale when the viewport dimensions change.</li>
+                            <li>However, this can cause problems with resizing widths, and there is loss of content of the table or navbar when the viewport is too narrow.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">1.4.8: Visual Presentation</td>
+                    <td class = "level">AAA</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>C19: Specifying alignment either to the left OR right in CSS</li>
+                            <li>C21: Specifying line spacing in CSS</li>
+                            <li>C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content</li>
+                            <li>C24: Using percentage values in CSS for container sizes</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G188: Providing a button on the page to increase line spaces and paragraph spaces</li>
+                            <li>G204: Not interfering with the user agent's reflow of text as the viewing window is narrowed</li>
+                            <li>G206: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website fulfills the necessary CSS requirements.</strong></p>
+                        <ul>
+                            <li>We have managed to separate CSS (such as background-color or text-color) from HTML and avoided (mostly) using styles in HTML code.</li>
+                            <li>CSS alignment is used in the cellphones table, and line spacing is used in the sidebar for cleaner separation between buttons.</li>
+                            <li>The unfulfilled requirements were difficult for us to implement at the time of assignment 1, although it is possible with some extra time.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan = "2" id = "guideline2-1" class = "guideline">Guideline 2.1 Keyboard Accessible</td>
+                    <td class = "subguideline">2.1.1: Keyboard</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>H91: Using HTML form controls and links</li>
+                            <li>G90: Providing keyboard-triggered event handlers</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G202: Ensuring keyboard control for all functionality</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website meets success level A.</strong></p>
+                        <ul>
+                            <li>Our website has very few functionalities that can be used with a keyboard.</li>
+                            <li>Simple actions can be done via keyboard: Submit form (Enter), PgUp & PgDn</li>
+                            <li>However, resetting the database is not possible with only a keyboard.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">2.1.2: No Keyboard Trap</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G21: Ensuring that users are not trapped in content</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website meets success level A.</strong></p>
+                        <ul>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan = "4" id = "guideline2-4" class = "guideline">Guideline 2.4 Navigable</td>
+                    <td class = "subguideline">2.4.1: Bypass Blocks</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G1: Adding a link at the top of each page that goes directly to the main content area</li>
+                            <li>G124: Adding links at the top of the page to each area of the content</li>
+                            <li>H69: Providing heading elements at the beginning of each section of content</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G123: Adding a link at the beginning of a block of repeated content to go to the end of the block</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website meets success level A.</strong></p>
+                        <ul>
+                            <li>The sidebar provides the functionalities needed for requirements G1 & G123 & G124.</li>
+                            <li>In our opinion, requirement G123 is not necessary for a single-page website with little content like ours.</li>
+                            <li>Users can navigate to each section of the page using the anchors in the navbar, as well as go to the main content area (cellphone table).</li>
+                            <li>Since we only had 2 sections, remembering to provide headings for each was not difficult.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">2.4.4: Link Purpose (In Context)</td>
+                    <td class = "level">A</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G91: Providing link text that describes the purpose of a link</li>
+                            <li>H30: Providing link text that describes the purpose of a link for anchor elements</li>
+                            <li>FLASH27: Providing button labels that describe the purpose of a button</li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>H24: Providing text alternatives for the area elements of image maps</li>
+
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website does NOT meet success level A.</strong></p>
+                        <ul>
+                            <li>Our links and anchors have clear and easy-to-remember names.</li>
+                            <li>Each of our buttons also have a clear label that describes its purpose.</li>
+                            <li>Requirement H24 can be implemented with some small changes to the HTML source code.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">2.4.6: Headings and Labels</td>
+                    <td class = "level">AA</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G131: Providing descriptive labels <i class = "extradetails"><u>partially fulfilled</u></i></li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p><strong>The website meets success level AA.</strong></p>
+                        <ul>
+                            <li>Requirement G130: "Providing descriptive headings" was not included due to the limited amount of content (and headings) on the page.
+                                If we had included an extra "Accessories" section for our website, a descriptive heading would have been necessary.
+                            </li>
+                            <li>Although there are no labels, the submit form has placeholders that gives information on how to fill out the form.
+                                However, we did not show clearly which fields are required and which fields are not.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "subguideline">2.4.8: Location</td>
+                    <td class = "level">AAA</td>
+                    <td class = "requirements">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </td>
+                    <td class = "requirements">
+                        <ul>
+                            <li>G128: Indicating current location within navigation bars</li>
+                        </ul>
+                    </td>
+                    <td class = "guidelineEvaluation">
+                        <p>For this guideline, we have tried to use the <strong>CSS :active selector</strong> to highlight where the user is on the page, but failed to get it working.</p>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </section>
+
+        <section id = "appendixB">
+            <p class = "description"></p>
+            <table>
+                <caption><h3>Appendix B: TA Feedback Assignment 1 & 2</h3></caption>
+                <tr>
+                  <th>Assignment subsection</th>
+                  <th>Feedback</th>
+                  <th>Type</th>
+                </tr>
+                <tr>
+                  <td>HTML d: Misc</td>
+                  <td>Indentation is of in a few places and we tend to put a lot of tags without indenting which makes it hard to read.</td>
+                  <td>Related to a technical implementation detail</td>
+                </tr>
+                <tr>
+                  <td>HTML e: Penalty for style and other bad markup</td>
+                  <td>We are using br as a stylistic tag.</td>
+                  <td>Related to a technical implementation detail</td>
+                </tr>
+                <tr>
+                  <td>CSS a: All items from Appendix 2</td>
+                  <td>Tags we are missing are: background, background-image, background-repeat, border-color, border-spacing, border-style, border-width, font-style, font-variant, list-style and margin-bottom.</td>
+                  <td>Related to a potentially negative aspect</td>
+                </tr>
+                <tr>
+                  <td>CSS b: print style</td>
+                  <td>Overall nice scaling, but the nav bar doesn't fit nicely.</td>
+                  <td>Related to a positive aspect and a potentially negative aspect</td>
+                </tr>
+                <tr>
+                  <td>CSS d: Responsice design</td>
+                  <td>You have no rules for different screen sizes, and your website doesn't look too good on vertical mobile.</td>
+                  <td>Related to a potentially negative aspect</td>
+                </tr>
+                <tr>
+                  <td>CSS e: browser compatibility report</td>
+                  <td>The report is quite meager. To improve it you could have added more tested browsers, a more in-depth look into the functionality and how it performs etc.</td>
+                  <td>Related to a potentially negative aspect</td>
+                </tr>
+                <tr>
+                  <td>CSS f: Misc</td>
+                  <td>Some more comments would have been nice.</td>
+                  <td>Related to a technical implementation detail</td>
+                </tr>
+                <tr>
+                  <td>Sortable tables</td>
+                  <td>Your images are sortable</td>
+                  <td>Related to a potentially negative aspect</td>
+                </tr>
+            </table>
+        </section>
+
+    </section>
+
+
+    <section id = "improve">
+        <h2>Improvement Plan</h2>
+        <p>This section will give possible ways to improve our webpage and address the unfulfilled requirements based on the information gathered in Appendix A & B.</p>
+        <p>Improvements are listed descending order, from most important to least important.</p>
+        <table id = "htmlToImprove">
+            <caption><h3>HTML Improvements</h3></caption>
+            <tr>
+                <th>Requirement</th>
+                <th>Action</th>
+            </tr>
+        </table>
+
+    </section>
+
+</body>
+</html>
