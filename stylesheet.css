@@ -94,6 +94,10 @@ pre {
 	color: rgba(255,255,255,1.00);
 }
 
+#formHeader  {
+	font-variant: small-caps;
+}
+
 .tableheader{
 	line-height: 150%;
 	font-size: 125%;
@@ -105,6 +109,10 @@ pre {
 
 input:focus {
 	background-color: yellow;
+}
+
+::placeholder {
+	color: red;
 }
 
 /* This is to align the placeholder text to the center*/
@@ -122,10 +130,11 @@ input:focus {
 	font-weight: bold;
 }
 
-a:hover span {
+.before:hover {
 	background-color: white;
 	color: red;
 	text-transform: uppercase;
+	font-style: oblique;
 }
 
 #ollist li {
@@ -194,8 +203,9 @@ footer {
 
 .buttons {
 	text-align: center;
-	background-color: gray;
+	background-color: red;
 	border-radius: 8px;
+	border-color: rgba(48,48,48,1.00);
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 3px;

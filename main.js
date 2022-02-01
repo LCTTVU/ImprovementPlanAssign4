@@ -78,6 +78,8 @@ $(function() {
 
     fillRows();
 
+
+
     $('#form').submit(function (e) {
 
         e.preventDefault();
@@ -113,6 +115,11 @@ $(function() {
     //We made this double click in case someone that uses our terrible website accidentally clicks the reset button once
     $('#resetbutton').dblclick(resetDatabase);
 
+    $(document).keypress("r",function(e) {
+        if(e.altKey)
+          resetDatabase();
+    });
+
     function deleteRows() {
         numPhones = $('#phonetable tr').length - 5; //number of items = total rows -  (header + form)
         for (i = 0; i < numPhones; i++){
@@ -131,7 +138,7 @@ $(function() {
                     addRow(phone);
                     console.log('fillRows success filling data');
                 });
-                $('#insertFields').trigger("reset");
+                $insertFields.trigger("reset");
             },
             error: function() {
                 console.log('fillRows error filling data');

@@ -39,52 +39,47 @@ it looks good in both browsers. However we ran into some problems with the portr
 		</pre>
 
 		<section id="Cellphones">
-
 			<h3 class="header">Cellphones</h3>
-
-			<form id="form"><table id="phonetable" class="table">
-				<caption class="tablecaption"><strong>Our best sellers</strong></caption> <!--table of best selling smartphones-->
-				<tr class="tableheader" id="phonetableheader">
-					<th>Image</th>
-					<th>Brand</th>
-					<th>Model</th>
-					<th><abbr title="Operating System">OS</abbr></th>
-					<th>Screen Size (inch)</th>
-				</tr>
-				<tr id ="formHeader">
-					<td colspan="5"><h5>Add a new item (required fields are followed by <abbr title="required">*</abbr>)</h5></td>
-				</tr>
-				<tr>
-					<td><label for="image">Image of Phone<abbr title="required" aria-label="required">*</abbr></label></td>
-					<td><label for="image">Brand<abbr title="required" aria-label="required">*</abbr></label></td>
-					<td><label for="image">Model<abbr title="required" aria-label="required">*</abbr></label></td>
-					<td><label for="image">Operating System<abbr title="required" aria-label="required">*</abbr></label></td>
-					<td><label for="image">Screen Size (inch)<abbr title="required" aria-label="required">*</abbr></label></td>
-				</tr>
-				<tr id="insertFields">
-					<td><input type="url" class="image" id="image" placeholder="Image URL" required></td>
-					<td><input type="text" class="brand" id="brand" placeholder="Brand Name" minlength="2" maxlength="32" required></td>
-					<td><input type="text" class="model" id="model" placeholder="Model Name" maxlength="64" required></td>
-					<td><input type="text" class="os" id="os" placeholder="Operating System" minlength="2" maxlength="32" required></td>
-					<td><input type="number" class="screensize" id="screensize" placeholder="Integer" min="1" max="50" required></td>
-				</tr>
-				<tr>
-					<td colspan="5"><button type="submit" id="submitbutton" class="buttons">Submit</button></td>
-				</tr>
-			</table></form>
-
+			<form id="form">
+				<table id="phonetable" class="table">
+					<caption class="tablecaption"><strong>Our best sellers</strong></caption> <!--table of best selling smartphones-->
+					<tr class="tableheader" id="phonetableheader">
+						<th>Image</th>
+						<th>Brand</th>
+						<th>Model</th>
+						<th><abbr title="Operating System">OS</abbr></th>
+						<th>Screen Size (inch)</th>
+					</tr>
+					<tr id ="formHeader">
+						<td colspan="5"><h4>add a new item (required fields are followed by <abbr title="required">*</abbr>)</h4></td>
+					</tr>
+					<tr>
+						<td><label for="image">Image of Phone<abbr title="required" aria-label="required">*</abbr></label></td>
+						<td><label for="image">Brand<abbr title="required" aria-label="required">*</abbr></label></td>
+						<td><label for="image">Model<abbr title="required" aria-label="required">*</abbr></label></td>
+						<td><label for="image">Operating System<abbr title="required" aria-label="required">*</abbr></label></td>
+						<td><label for="image">Screen Size (inch)<abbr title="required" aria-label="required">*</abbr></label></td>
+					</tr>
+					<tr id="insertFields">
+						<td><input type="url" class="image" id="image" placeholder="Image URL" required></td>
+						<td><input type="text" class="brand" id="brand" placeholder="Brand Name" minlength="2" maxlength="32" required></td>
+						<td><input type="text" class="model" id="model" placeholder="Model Name" maxlength="64" required></td>
+						<td><input type="text" class="os" id="os" placeholder="Operating System" minlength="2" maxlength="32" required></td>
+						<td><input type="number" class="screensize" id="screensize" placeholder="Integer" min="1" max="50" required></td>
+					</tr>
+					<tr>
+						<td colspan="5"><button type="submit" id="submitbutton" class="buttons">Click to Submit</button></td>
+					</tr>
+				</table>
+			</form>
 			<div id = "resetbox">
-				<button id="resetbutton" class="buttons">Double-click to Reset Database</button>
+				<button id="resetbutton" class="buttons">Double-click or <strong>Alt + R</strong> to Reset Database</button>
 			</div>
-
-			<p id="deliveroffer"><a><span id="before">Order before <u>5:00pm</u></span></a> and get your phone delivered <em>the next day!</em></p>
-
+			<p id="deliveroffer"><a class="before">Order before <u>5:00pm</u> and get your phone delivered <em>the next day!</em></span></a></p>
 		</section>
 
 		<div id="top3list">
-			<p>
-				<strong><u>Top 3 upcoming smartphones</u></strong>
-			</p>
+			<p><strong><u>Top 3 upcoming smartphones</u></strong></p>
 			<ol id="ollist">
 				<li>Iphone 13</li>
 				<li>Galaxy s21</li>
@@ -93,9 +88,7 @@ it looks good in both browsers. However we ran into some problems with the portr
 		</div>
 
 		<div id="buytips">
-			<p>
-				<strong><u>What to look for when buying a new cellphone:</u></strong>
-			</p>
+			<p><strong><u>What to look for when buying a new cellphone:</u></strong></p>
 			<dl>
 				<div>
 					<dt>PRICE</dt>
@@ -129,11 +122,9 @@ it looks good in both browsers. However we ran into some problems with the portr
 					</td>
 
 					<td id="contactinfo">
-						<p>
-							<strong><u>Contact info:</u></strong><br>
-							<a href="mailto:cellphoneshop@cellphonemail.cellphone" id="emailbutton">Email</a> cellphoneshop@cellphonemail.cellphone<br>
-							Tel: +3123456789<br>
-						</p>
+						<p><strong><u>Contact info:</u></strong></p>
+						<p><a href="mailto:cellphoneshop@cellphonemail.cellphone" id="emailbutton">Email</a> cellphoneshop@cellphonemail.cellphone</p>
+						<p>Tel: +3123456789</p>
 					</td>
 				</tr>
 			</table>
