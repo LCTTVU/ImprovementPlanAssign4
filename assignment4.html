@@ -506,6 +506,32 @@
             </tr>
             <tr>
                 <td class = "requirements">
+                    <p>G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width</p>
+                </td>
+                <td class = "type">
+                    <p>CSS</p>
+                </td>
+                <td class = "action">
+                    <p>Add clamp() functions to some containers:</p>
+                    <pre>
+<!--                  -->.menulink {
+<!--                  -->	...
+<!--                  -->	font-size: clamp(0.25rem, 1.5vw, 1.0rem);
+<!--                  -->	...
+<!--                  -->}
+
+<!--                  -->.table {
+<!--                  -->	...
+<!--                  -->	width: clamp(200px, 95%, 1000px);
+<!--                  -->}
+                    </pre>
+                </td>
+                <td class = "aim">
+                    <p>Make the website more accessible to mobile users.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class = "requirements">
                     <p>Specify how users can use a button</p>
                 </td>
                 <td class = "type">
