@@ -461,6 +461,27 @@
                 <th>Action</th>
                 <th>Aim</th>
             </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>FLASH29: Setting the label property for form components</li>
+                        <li>H44: Using label elements to associate text labels with form controls</li>
+                    </ul>
+                </td>
+                <td>
+                    <p>Add extra row before form inputs</p>
+                    <pre>
+&lt;tr id ="formHeader"&gt;
+    &lt;td colspan="5"&gt;
+        &lt;h4&gt;add a new item (required fields are followed by &lt;abbr title="required"&gt;*&lt;/abbr&gt;)&lt;/h4&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+                    </pre>
+                </td>
+                <td>
+                    <p>Make it so users do not have to scroll up for table headers when submitting a new item, in case the table gets too large.</p>
+                </td>
+            </tr>
         </table>
 
     </section>
