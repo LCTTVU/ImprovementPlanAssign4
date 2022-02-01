@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<title>Cellphone Shop</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+	<script defer src="main.js"></script>
+</head>
+
+<!--Assignment 1 Notes: We tested our HTML/CSS Markup in 2 different browsers: Google Chrome and Microsoft Edge and got very similar results. When printing the webpage horizontally,
+it looks good in both browsers. However we ran into some problems with the portrait mode, as our cellphone table could not fit in the page width. As for tags, IDs and classes, all of them worked the same due to the browsers being very similar-->
+
+
+
+<body>
+
+<!--navigation bar on the side-->
+	<nav>
+		<ul id="menu">
+			<li class = "menubutton" tabindex="0"><a class = "menulink" href="#Home">Home</a></li>
+			<li class = "menubutton" tabindex="0"><a class = "menulink" href="#Cellphones">Cellphones</a></li>
+			<li class = "menubutton" tabindex="0"><a class = "menulink" href="#Accessories">Accessories</a></li>
+			<li class = "menubutton" tabindex="0"><a class = "menulink" href="#ContactUs">Contact Us</a></li>
+		</ul>
+	</nav>
+
+	<main id="content">
+
+		<header id="Home">
+			<h1 class="header">Smartphone webshop</h1>
+			<h2 class="header">The best online shop for Smartphones!</h2>
+		</header>
+
+		<pre><span class="titlespan"><strong>NEWEST - CHEAPEST - TOP</strong></span> Smartphones!
+		<span class="titlespan"><strong>THEE   BEST</strong></span> deals in town!</pre>
+
+		<section id="Cellphones">
+
+			<h3 class="header">Cellphones</h3>
+
+			<form id="form"><table id="phonetable" class="table">
+				<caption class="tablecaption"><strong>Our best sellers</strong></caption> <!--table of best selling smartphones-->
+				<tr class="tableheader" id="phonetableheader">
+					<th>Image</th>
+					<th>Brand</th>
+					<th>Model</th>
+					<th><abbr title="Operating System">OS</abbr></th>
+					<th>Screen Size (inch)</th>
+				</tr>
+				<tr id ="formHeader">
+					<td colspan="5"><h5>Add a new item (required fields are followed by <abbr title="required">*</abbr>)</h5></td>
+				</tr>
+				<tr>
+					<td><label for="image">Image of Phone<abbr title="required" aria-label="required">*</abbr></label></td>
+					<td><label for="image">Brand<abbr title="required" aria-label="required">*</abbr></label></td>
+					<td><label for="image">Model<abbr title="required" aria-label="required">*</abbr></label></td>
+					<td><label for="image">Operating System<abbr title="required" aria-label="required">*</abbr></label></td>
+					<td><label for="image">Screen Size (inch)<abbr title="required" aria-label="required">*</abbr></label></td>
+				</tr>
+				<tr id="insertFields">
+					<td><input type="url" class="image" id="image" placeholder="Image URL" required></td>
+					<td><input type="text" class="brand" id="brand" placeholder="Brand Name" minlength="2" maxlength="32" required></td>
+					<td><input type="text" class="model" id="model" placeholder="Model Name" maxlength="64" required></td>
+					<td><input type="text" class="os" id="os" placeholder="Operating System" minlength="2" maxlength="32" required></td>
+					<td><input type="number" class="screensize" id="screensize" placeholder="Integer" min="1" max="50" required></td>
+				</tr>
+				<tr>
+					<td colspan="5"><button type="submit" id="submitbutton" class="buttons">Submit</button></td>
+				</tr>
+			</table></form>
+
+			<div id = "resetbox">
+				<button id="resetbutton" class="buttons">Double-click to Reset Database</button>
+			</div>
+
+			<p id="deliveroffer"><a><span id="before">Order before <u>5:00pm</u></span></a> and get your phone delivered <em>the next day!</em></p>
+
+		</section>
+
+		<div id="top3list">
+			<p><strong><u>Top 3 upcoming smartphones</u></strong></p>
+			<ol id="ollist">
+			<li>Iphone 13</li>
+			<li>Galaxy s21</li>
+			<li>Pixel 6</li>
+			</ol>
+		</div>
+
+		<div id="buytips">
+			<p><strong><u>What to look for when buying a new cellphone:</u></strong></p>
+			<dl>
+				<div>
+					<dt>PRICE</dt>
+					<dd>How much are you willing to spend?</dd>
+				</div>
+				<div>
+					<dt>OS</dt>
+					<dd>What kind of operating system do you want or are familiar with?</dd>
+				</div>
+				<div>
+					<dt>BRAND</dt>
+					<dd>What brand do you want?</dd>
+				</div>
+				<div>
+					<dt>SCREEN SIZE</dt>
+					<dd>What size fits your hands or pocket?</dd>
+					</div>
+			</dl>
+		</div>
+
+		<section id="ContactUs">
+			<h3 class="header">Contact Us</h3>
+			<table id="contacttable" class="table">
+				<caption class="tablecaption">Our Customer Services are available from 8am to 8pm Netherlands time!</caption>
+				<tr>
+					<td id="location">
+						<figure>
+							<img src="https://www.etopia.nl/wp-content/uploads/2018/07/Screenshot-2017-12-20-at-14.35.44.png" id="map">
+							<figcaption>Fig.1 - The location of our store</figcaption>
+						</figure>
+					</td>
+
+					<td id="contactinfo">
+						<p>
+							<strong><u>Contact info:</u></strong><br>
+							<a href="mailto:cellphoneshop@cellphonemail.cellphone" id="emailbutton">Email</a> cellphoneshop@cellphonemail.cellphone<br>
+							Tel: +3123456789<br>
+						</p>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<footer>
+			<p>This Webpage was made by <span id="groupname">Lab 123 of Webtech.</span></p>
+		</footer>
+
+	</main>
+
+</body>
+
+</html>
