@@ -6,6 +6,10 @@
    font-family: "Arial", "sans-serif";
 }
 
+body {
+	background-image: url(https://cdn.wallpapersafari.com/40/90/VxQbqc.png);
+	background-repeat: repeat-x;
+}
 
 
 .header {
@@ -14,7 +18,7 @@
 	text-align: center;
 	line-height: 300%;
 	color: rgba(255,255,255,1.00);
-	background-color: rgba(16,16,16,1.00);
+	background: rgba(16,16,16,1.00);
 }
 
 nav {
@@ -80,6 +84,7 @@ pre {
 .table {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: auto;
 	padding: 10px;
 	width: clamp(200px, 95%, 1000px);
 }
@@ -88,6 +93,7 @@ pre {
 	border: solid 2px black;
 	border-collapse: collapse;
 	text-align: center;
+	border-spacing: 15px;
 }
 
 .tablecaption , #formHeader {
@@ -209,6 +215,8 @@ footer {
 	background-color: red;
 	border-radius: 8px;
 	border-color: rgba(48,48,48,1.00);
+	border-style: solid;
+	border-width: 2px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 3px;
@@ -221,4 +229,8 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+dl {
+	list-style-type: circle;
 }
