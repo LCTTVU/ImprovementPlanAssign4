@@ -6,10 +6,10 @@
    font-family: "Arial", "sans-serif";
 }
 
-body {
+/*body {
 	background-image: url(https://cdn.wallpapersafari.com/40/90/VxQbqc.png);
 	background-repeat: repeat-x;
-}
+}*/
 
 
 .header {
@@ -27,7 +27,8 @@ nav {
 	float: left;
 	overflow: hidden;
 	width: clamp(20px, 12%, 200px);
-	background-color: rgba(16,16,16,1.00);
+	background-image: url(https://cdn.wallpapersafari.com/40/90/VxQbqc.png);
+	background-repeat: repeat-x;
 }
 
 div {
@@ -37,7 +38,7 @@ div {
 }
 
 a:link {
-	background-color: rgba(16,16,16,1.00);
+	/*background-color: rgba(16,16,16,1.00);*/
 	text-decoration: none;
 	padding: 10px;
 }
