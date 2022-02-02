@@ -598,7 +598,7 @@
                     <p>CSS</p>
                 </td>
                 <td class = "action">
-                    <p>We were not able to make this work, because even with trying to look online for solutions we could not find a way to dynamicly update the navigation bar using html and css.</p>
+                    <p>We were not able to make this work after looking for solutions online, and we could not find a way to dynamically update in-page anchor links in the navbar using CSS.</p>
                 </td>
                 <td class = "aim">
                     <p>Make the navigation bar update with the users current position on the webpage</p>
@@ -624,13 +624,22 @@
                     <p>CSS</p>
                 </td>
                 <td class = "action">
-                    <p>Add border-color:</p>
+                    <p>Add border-color & border-width & border-style:</p>
                     <pre>
 <!--                  -->.buttons {
 <!--                  -->   ...
 <!--                  -->	border-color: rgba(48,48,48,1.00);
+<!--                  -->	border-style: solid;
+<!--                  -->	border-width: 2px;
 <!--                  -->	...
 <!--                  -->}                        
+                    </pre>
+                    <p>Add border-spacing:</p>
+                    <pre>
+<!--                  -->#phonetable, #phonetable th, #phonetable td {
+<!--                  -->	...
+<!--                  -->	border-spacing: 1px;
+<!--                  -->}
                     </pre>
                     <p>Add font-variant:</p>
                     <pre>
@@ -645,6 +654,34 @@
 <!--                  -->	font-style: oblique;
 <!--                  -->   ...
 <!--                  -->}                       
+                    </pre>
+                    <p>Add background-image & background-repeat:</p>
+                    <pre>
+<!--                  -->nav {
+<!--                  -->    ...
+<!--                  -->	background-image: url(https://cdn.wallpapersafari.com/40/90/VxQbqc.png);
+<!--                  -->	background-repeat: repeat-x;
+<!--                  -->}
+                    </pre>
+                    <p>Add background (shorthand notation):</p>
+                    <pre>
+<!--                  -->h2 {
+<!--                  -->	background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(64,64,64,1.00) 100%) !important;
+<!--                  -->}
+                    </pre>
+                    <p>Add margin-bottom:</p>
+                    <pre>
+<!--                  -->.table {
+<!--                  -->	...
+<!--                  -->	margin-bottom: 30px;
+<!--                  -->	...
+<!--                  -->}
+                    </pre>
+                    <p>Add list-style:</p>
+                    <pre>
+<!--                  -->dl {
+<!--                  -->	list-style: circle;
+<!--                  -->}
                     </pre>
                 </td>
                 <td class = "aim">

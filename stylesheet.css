@@ -18,7 +18,11 @@
 	text-align: center;
 	line-height: 300%;
 	color: rgba(255,255,255,1.00);
-	background: rgba(16,16,16,1.00);
+	background-color: rgba(16,16,16,1.00);
+}
+
+h2 {
+	background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(64,64,64,1.00) 100%) !important;
 }
 
 nav {
@@ -85,16 +89,15 @@ pre {
 .table {
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: auto;
+	margin-bottom: 30px;
 	padding: 10px;
 	width: clamp(200px, 95%, 1000px);
 }
 
 #phonetable, #phonetable th, #phonetable td {
 	border: solid 2px black;
-	border-collapse: collapse;
 	text-align: center;
-	border-spacing: 15px;
+	border-spacing: 1px;
 }
 
 .tablecaption , #formHeader {
@@ -233,5 +236,5 @@ footer {
 }
 
 dl {
-	list-style-type: circle;
+	list-style: circle;
 }
